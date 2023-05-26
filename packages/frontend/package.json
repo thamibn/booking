@@ -1,0 +1,32 @@
+{
+  "name": "@mono/frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "docker build -t frontend-app . && docker run -p 3000:8080 frontend-app"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "element-plus": "^2.3.5",
+    "lodash": "^4.17.21",
+    "unplugin-icons": "^0.16.1",
+    "vee-validate": "^4.9.5",
+    "vue": "^3.3.2",
+    "vue-router": "^4.2.0",
+    "yup": "^1.1.1"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.13",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "unplugin-auto-import": "^0.16.2",
+    "unplugin-element-plus": "^0.7.1",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.3.5"
+  }
+}

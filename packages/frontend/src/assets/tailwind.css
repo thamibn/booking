@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.el-input__wrapper{
+    width:100% !important;
+}
+.el-select-v2 .el-select-v2__combobox-input:focus{
+    border-color: #ECB200 !important;
+}
+
+:root {
+    --el-color-primary: #ECB200 !important;
+
+    --el-button-background-color: #ECB200 !important;
+    --el-button-border-color: #ECB200;
+    --el-button-hover-color: #ECB200;
+    --el-button-active-background-color: #ECB200 !important;
+    --el-button-active-border-color: #ECB200 !important;
+}
+
+@layer base {
+    [type="text"],
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+        @apply w-full border-gray-300 shadow-sm focus:ring-0 focus:ring-offset-0;
+    }
+
+    p {
+        @apply text-base font-light leading-relaxed mt-0 mb-4
+    }
+}
+
+@layer components {
+    .btn-spinner,
+    .btn-spinner:after {
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .btn-spinner {
+        font-size: 10px;
+        position: relative;
+        text-indent: -9999em;
+        border-top: .2em solid white;
+        border-right: .2em solid white;
+        border-bottom: .2em solid white;
+        border-left: .2em solid transparent;
+        transform: translateZ(0);
+        animation: spinning 1s infinite linear;
+    }
+
+    @keyframes spinning {
+        0% {
+            transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    button:disabled,
+    button[disabled] {
+        @apply bg-gray-400 hover:bg-gray-400 cursor-not-allowed opacity-25;
+    }
+
+    input[disabled]{
+        @apply cursor-not-allowed border-gray-400 bg-gray-400 hover:bg-gray-400 opacity-25;
+    }
+    input[type=checkbox][disabled] {
+        @apply cursor-not-allowed border-gray-400 bg-gray-400 hover:bg-gray-400 opacity-25;
+    }
+}
